@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Questions </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+	
+<ion-slides >
+   <ion-slide *ngFor="let item of (results | async); let i = index">
+    <ion-card>  
+      <ion-card-header>  
+        <ion-card-subtitle>Question Number {{i+1}}</ion-card-subtitle>  
+         
+        </ion-card-header>  
+      <ion-card-content>  
+        <img src="{{item.image_data}}"/>
+        <ion-list>
+          <ion-radio-group>
+            <ion-list-header>
+              <ion-label>Your Answer</ion-label>
+            </ion-list-header>
+        
+            <ion-item>
+              <ion-label>A</ion-label>
+              <ion-radio slot="start" value="biff" checked></ion-radio>
+            </ion-item>
+        
+            <ion-item>
+              <ion-label>B</ion-label>
+              <ion-radio slot="start" value="griff"></ion-radio>
+            </ion-item>
+        
+            <ion-item>
+              <ion-label>C</ion-label>
+              <ion-radio slot="start" value="buford"></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>D</ion-label>
+              <ion-radio slot="start" value="buford"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list>
+      </ion-card-content>  
+     
+    </ion-card>  
+    
+     
+
+    </ion-slide>
+</ion-slides>
+</ion-content>

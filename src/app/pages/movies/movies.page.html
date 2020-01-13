@@ -16,7 +16,9 @@
          
         </ion-card-header>  
       <ion-card-content>  
-        <img src="{{item.image_data}}"/>
+        
+        <img [src]="'data:image/jpg;base64,'+item.image_data | safeHTML " />
+        <!-- <img src="data:image/png;base64,{{item.image_data}}"/> -->
         <ion-list>
           <ion-radio-group>
             <ion-list-header>
